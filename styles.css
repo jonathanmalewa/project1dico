@@ -1,0 +1,382 @@
+/* Setel kotak model untuk semua elemen */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Gaya dasar untuk seluruh halaman */
+body {
+  height: auto;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gaya untuk navbar */
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding-block: 0.5; /* Mengurangi padding */
+  z-index: 999;
+}
+
+header.navbar-container .nav-list {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+header.navbar-container .logo img {
+  width: 100px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #6c3428;
+  color: white;
+}
+
+/* Gaya untuk konten utama */
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+  margin-right: 25px;
+  text-align: justify;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #6c3428;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+  border: 3px solid #6c3428;
+  color: #6c3428;
+  background-color: transparent;
+}
+
+main .content .content-description button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #6c3428;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .content-description a {
+  text-decoration: none;
+  color: white;
+}
+
+main .content .content-description a:hover {
+  text-decoration: none;
+  color: #6c3428;
+}
+
+main .content .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 400px;
+  border-radius: 30px;
+}
+
+/* Gaya untuk sidebar sosial media */
+aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+aside .social-media {
+  height: 100%;
+  display: flex;
+}
+
+aside .social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  background-color: #6c3428;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+aside .social-media li {
+  list-style-type: none;
+}
+
+aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+aside .social-media img {
+  width: 30px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease-in-out;
+}
+
+aside .social-media img:hover {
+  filter: brightness(1) invert(0);
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #6c3428;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Gaya untuk daftar produk */
+.content-product {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 25%;
+}
+
+.product-card {
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.product-card img {
+  margin: auto;
+  min-width: 250px;
+  width: 250px;
+  border-radius: 30px;
+}
+
+.product-card h2 {
+  text-align: center;
+}
+
+.product-card p {
+  flex: 1;
+  text-align: center;
+  font-size: large;
+  line-height: 1.5;
+}
+
+/* Gaya untuk artikel */
+.article-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25%;
+  opacity: 0; /* Awalnya atur opasitas ke 0 */
+  transform: translateX(-100%); /* Mulai dari luar tampilan (kiri) */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.article-card.active {
+  opacity: 1;
+  transform: translateX(0); /* Akhiran di posisi normal (tampilan) */
+}
+
+.article-card img {
+  max-width: 50%;
+  margin-right: 5rem;
+  border-radius: 30px;
+}
+
+.article-card .product-details {
+  flex: 1;
+  text-align: center;
+  font-size: large;
+  line-height: 1.5;
+}
+
+/* Gaya untuk bagian kontak */
+.contact-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15%;
+  border-radius: 5px;
+}
+
+.contact-card .contact-details {
+  flex: 1;
+  text-align: center;
+  font-size: large;
+  line-height: 1.5;
+}
+
+.contact-card .contact-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card .contact-details p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-card .contact-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-card .contact-details ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card .contact-image {
+  max-width: 50%;
+  margin-right: 5rem;
+  border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Responsif untuk perangkat dengan lebar maksimum 768px */
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .content .content-description .title {
+    font-size: 3rem;
+  }
+
+  .content .content-description p {
+    font-size: 1.4rem !important;
+  }
+
+  .content .content-image {
+    height: auto !important;
+  }
+  .article-card {
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .article-card img {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    border-radius: 15px;
+  }
+
+  .article-card .product-details {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    margin-top: 10%;
+  }
+
+  .contact-card .contact-image {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    border-radius: 15px;
+  }
+
+  .contact-card .contact-details {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
